@@ -37,6 +37,23 @@ rails s
 
 Visit /comments
 
+NoMethodError in Comments#index
+
+Showing /home/fonsan/custom_primary_key_preload/app/views/comments/index.html.erb where line #12 raised:
+
+undefined method `type' for nil:NilClass
+
+Extracted source (around line #12):
+
+9:     <th></th>
+10:   </tr>
+11: 
+12: <% @comments.each do |comment| %>
+13:   <tr>
+14:     <td><%= comment.post_id %></td>
+15:     <td><%= comment.content %></td>
+
+
 activesupport (3.0.0) lib/active_support/whiny_nil.rb:48:in `method_missing'
 activerecord (3.0.0) lib/active_record/association_preload.rb:340:in `block in preload_belongs_to_association'
 activerecord (3.0.0) lib/active_record/association_preload.rb:333:in `each'
